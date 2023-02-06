@@ -11,7 +11,6 @@ body {
     height: 100vh;
 }
 
-
 .card-container {
     position: relative;
     display: flex;
@@ -20,72 +19,70 @@ body {
     padding: 4.4mm;
     background-color: white;
 
-    --trim-line-height: 5.282mm;
-    --offset-from-white: 7.4mm;
+    --trim-line-height: 5.282mm; /*Height of the trimmark*/
+    --offset-from-white: 7.4mm; /*Distance from white edge to trimmark*/
     --transform-up: translateY(-50%);
-    --trasform-down: translateY(50%);
-    --vertical-width: .5px; 
-    --horizontal-height: .5px;
-    --trimline-width: .6px;
-    --trimline-offset: -.6px;
+    --transform-down: translateY(50%);
+    --black-trimmark-width: 0.5px;
+    --white-trimmark-width: 0.6px;
+    --white-trimmark-offset: -0.6px;
 }
 
-.card{
+.card {
     width: 73mm;
     height: 19mm;
 }
-
 
 .trim-line-vertical-top-left {
     position: absolute;
     top: 0;
     left: var(--offset-from-white);
     height: var(--trim-line-height);
-    width: var(--vertical-width);
+    width: var(--black-trimmark-width);
     background-color: black;
 }
 
-.trim-line-vertical-top-left::before, 
+.trim-line-vertical-top-left::before,
 .trim-line-vertical-top-left:after {
     content: "";
     position: absolute;
-    width: var(--trimline-width);
+    width: var(--white-trimmark-width);
     height: var(--trim-line-height);
     background-color: white;
 }
 
 .trim-line-vertical-top-left::after {
-    right: var(--trimline-offset);
+    right: var(--white-trimmark-offset);
 }
 .trim-line-vertical-top-left::before {
-    left: var(--trimline-offset)
+    left: var(--white-trimmark-offset);
 }
 
 .trim-line-horizontal-top-left {
     position: absolute;
     top: var(--offset-from-white);
     left: 0;
-    height: var(--horizontal-height);
+    height: var(--black-trimmark-width);
     width: var(--trim-line-height);
     background-color: black;
 
     transform: var(--transform-up);
 }
 
-.trim-line-horizontal-top-left::before, 
+.trim-line-horizontal-top-left::before,
 .trim-line-horizontal-top-left:after {
     content: "";
     position: absolute;
     width: var(--trim-line-height);
-    height: var(--trimline-width);
+    height: var(--white-trimmark-width);
     background-color: white;
 }
 
 .trim-line-horizontal-top-left::after {
-    top: var(--trimline-offset);
+    top: var(--white-trimmark-offset);
 }
 .trim-line-horizontal-top-left::before {
-    bottom: var(--trimline-offset)
+    bottom: var(--white-trimmark-offset);
 }
 
 .trim-line-vertical-top-right {
@@ -93,59 +90,59 @@ body {
     top: 0;
     right: var(--offset-from-white);
     height: var(--trim-line-height);
-    width: var(--vertical-width);
+    width: var(--black-trimmark-width);
     background-color: black;
 }
 
-.trim-line-vertical-top-right::before, 
+.trim-line-vertical-top-right::before,
 .trim-line-vertical-top-right:after {
     content: "";
     position: absolute;
-    width: var(--trimline-width);
+    width: var(--white-trimmark-width);
     height: var(--trim-line-height);
     background-color: white;
 }
 
 .trim-line-vertical-top-right::after {
-    right: var(--trimline-offset);
+    right: var(--white-trimmark-offset);
 }
 .trim-line-vertical-top-right::before {
-    left: var(--trimline-offset)
+    left: var(--white-trimmark-offset);
 }
 
 .trim-line-horizontal-top-right {
     position: absolute;
     top: var(--offset-from-white);
     right: 0;
-    height: var(--horizontal-height);
+    height: var(--black-trimmark-width);
     width: var(--trim-line-height);
     background-color: black;
 
     transform: var(--transform-up);
 }
 
-.trim-line-horizontal-top-right::before, 
+.trim-line-horizontal-top-right::before,
 .trim-line-horizontal-top-right:after {
     content: "";
     position: absolute;
     width: var(--trim-line-height);
-    height: var(--trimline-width);
+    height: var(--white-trimmark-width);
     background-color: white;
 }
 
 .trim-line-horizontal-top-right::after {
-    bottom: var(--trimline-offset);
+    bottom: var(--white-trimmark-offset);
 }
 .trim-line-horizontal-top-right::before {
-    top: var(--trimline-offset)
-} 
+    top: var(--white-trimmark-offset);
+}
 
 .trim-line-vertical-bottom-left {
     position: absolute;
     left: var(--offset-from-white);
     bottom: 0;
     height: var(--trim-line-height);
-    width: var(--vertical-width);
+    width: var(--black-trimmark-width);
     background-color: black;
 }
 
@@ -153,49 +150,49 @@ body {
 .trim-line-vertical-bottom-left::after {
     content: "";
     position: absolute;
-    width: var(--trimline-width);
+    width: var(--white-trimmark-width);
     height: var(--trim-line-height);
     background-color: white;
 }
 
 .trim-line-vertical-bottom-left::after {
-    right: var(--trimline-offset);
+    right: var(--white-trimmark-offset);
 }
 .trim-line-vertical-bottom-left::before {
-    left: var(--trimline-offset);
+    left: var(--white-trimmark-offset);
 }
 
 .trim-line-horizontal-bottom-left {
     position: absolute;
     bottom: var(--offset-from-white);
-    left:0;
-    transform: var(--trasform-down);
+    left: 0;
+    transform: var(--transform-down);
     background-color: black;
     width: var(--trim-line-height);
-    height: var(--horizontal-height);
+    height: var(--black-trimmark-width);
 }
 
 .trim-line-horizontal-bottom-left::before,
 .trim-line-horizontal-bottom-left::after {
     content: "";
     position: absolute;
-    height: var(--trimline-width);
+    height: var(--white-trimmark-width);
     width: var(--trim-line-height);
     background-color: white;
 }
 
 .trim-line-horizontal-bottom-left::before {
-    top: var(--trimline-offset);
+    top: var(--white-trimmark-offset);
 }
 
 .trim-line-horizontal-bottom-left::after {
-    bottom: var(--trimline-offset);
+    bottom: var(--white-trimmark-offset);
 }
 
 .trim-line-vertical-bottom-right {
     position: absolute;
     height: var(--trim-line-height);
-    width: var(--vertical-width);
+    width: var(--black-trimmark-width);
     background-color: black;
     bottom: 0;
     right: var(--offset-from-white);
@@ -206,49 +203,47 @@ body {
     content: "";
     position: absolute;
     height: var(--trim-line-height);
-    width: var(--trimline-width);
+    width: var(--white-trimmark-width);
     background-color: white;
 }
 
 .trim-line-vertical-bottom-right::after {
-    right: var(--trimline-offset);
+    right: var(--white-trimmark-offset);
 }
 
 .trim-line-vertical-bottom-right::before {
-    left: var(--trimline-offset);
+    left: var(--white-trimmark-offset);
 }
 
 .trim-line-horizontal-bottom-right {
     position: absolute;
-    height: var(--horizontal-height);
-    transform: var(--trasform-down);
+    height: var(--black-trimmark-width);
+    transform: var(--transform-down);
     width: var(--trim-line-height);
     background-color: black;
     right: 0;
     bottom: var(--offset-from-white);
 }
 
-.trim-line-horizontal-bottom-right::before, 
+.trim-line-horizontal-bottom-right::before,
 .trim-line-horizontal-bottom-right::after {
     content: "";
     position: absolute;
     background-color: white;
-    height: var(--trimline-width);
+    height: var(--white-trimmark-width);
     width: var(--trim-line-height);
-
 }
 
 .trim-line-horizontal-bottom-right::before {
-    top: var(--trimline-offset);
+    top: var(--white-trimmark-offset);
 }
 
 .trim-line-horizontal-bottom-right::after {
-    bottom: var(--trimline-offset);
+    bottom: var(--white-trimmark-offset);
 }
 
 .name {
     position: absolute;
-    /* z-index: 999; */
     color: rgb(190, 175, 135);
     font-size: 17px;
     font-family: oaks;
