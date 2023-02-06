@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: OakesGroteskRegular;
+    src: url("fonts/OakesGroteskRegular.ttf")
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: OakesGroteskRegular;
 }
 
 .card-container {
@@ -246,5 +252,5 @@ body {
     position: absolute;
     color: rgb(190, 175, 135);
     font-size: 17px;
-    font-family: oaks;
+    font-family: OakesGroteskRegular;
 }
